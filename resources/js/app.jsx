@@ -3,6 +3,7 @@ import '../css/app.css';
 import { createInertiaApp } from '@inertiajs/react'
 import { createRoot } from 'react-dom/client'
 import { ThemeProvider } from './components/ui/theme-provider';
+import { Toaster } from 'sonner';
 
 createInertiaApp({
   resolve: name => {
@@ -13,6 +14,7 @@ createInertiaApp({
     createRoot(el).render(
       <ThemeProvider defaultTheme="system" storageKey="theme">
         <App {...props} />
+        <Toaster position="bottom-center" />
       </ThemeProvider>
     )
   },
